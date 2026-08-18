@@ -1,0 +1,25 @@
+University Course Hierarchy Traversal
+
+A simple Python program to display course codes in sorted order using both **Recursive** and **Non-Recursive (Iterative)** Inorder Traversals on a Binary Search Tree (BST).
+
+
+ How It Works
+
+An Inorder Traversal visits tree nodes in the Left  Root Right sequence. When applied to a Binary Search Tree, it outputs all items in sorted order.
+
+ 1. Recursive Approach
+Uses function calls to travel down to the leftmost node, prints the course code, and moves right. While clean and short, very deep trees can cause a `RecursionError` by overloading Python's system stack.
+
+2. Non-Recursive Approach
+Manually mimics the call stack using a standard Python list as a **LIFO (Last-In, First-Out)** stack:
+* Moves down to the far left, saving visited nodes in the stack.
+* Pops the top node when a dead end is reached and prints the course code.
+* Shifts to the right subtree and repeats.
+
+
+
+
+
+Conclusion
+
+Both approaches produce the exact same sorted output. The recursive method is easier to write and read, but the non-recursive method is safer for real-world, large-scale hierarchy systems because it eliminates the risk of memory stack overflows.
